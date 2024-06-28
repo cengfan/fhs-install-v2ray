@@ -125,9 +125,15 @@ sudo systemctl enable v2ray
 curl -x socks5://127.0.0.1:1080  https://www.google.com -v
 ```
 
-###配置firefox代理
+### 配置firefox代理
 
 ```
+
+网络设置->手动配置代理
+
+SOCKS 主机 127.0.0.1
+端口 1080
+SOCKS v5
 
 ```
 
