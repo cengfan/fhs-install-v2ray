@@ -78,13 +78,13 @@ vim /usr/local/etc/v2ray/config.json
       "settings": {
         "vnext": [
           {
-            "address": "xxx",
-            "port": xxx,
+            "address": "**节点地址**", 
+            "port": xxx, //节点端口
             "users": [
               {
-                "id": "xxx",
+                "id": "**V2Ray UUID**", //节点UUID
                 "alterId": 0,
-		            "security": "auto"
+                "security": "auto"
               }
             ]
           }
