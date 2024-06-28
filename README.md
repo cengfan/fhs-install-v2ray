@@ -120,6 +120,17 @@ sudo systemctl enable v2ray
 
 ```
 
+### 测试
+```
+curl -x socks5://127.0.0.1:1080  https://www.google.com -v
+```
+
+###配置firefox代理
+
+```
+
+```
+
 
 ### 解決問題
 
