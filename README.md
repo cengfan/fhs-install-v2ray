@@ -50,7 +50,28 @@ installed: /etc/systemd/system/v2ray@.service
 
 ```
 # bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove
+
 ```
+
+###  V2Ray 开机启动
+
+```
+
+# 启动V2ray 
+sudo systemctl start v2ray 
+
+# 停止V2ray 
+sudo systemctl stop v2ray 
+
+# 检查V2ray状态 
+sudo systemctl status v2ray 
+
+# 设置V2ray开机自启动 
+sudo systemctl enable v2ray
+
+
+```
+
 
 ### 解決問題
 
