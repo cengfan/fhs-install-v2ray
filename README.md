@@ -50,13 +50,61 @@ installed: /etc/systemd/system/v2ray@.service
 
 ```
 # bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove
+```
+
+
+## 配置v2ray
+```
+vim /usr/local/etc/v2ray/config.json
+
+
+{
+  "inbounds": [
+    {
+      "port": 1080,
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      },
+      "settings": {
+        "auth": "noauth"
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "xxx",
+            "port": xxx,
+            "users": [
+              {
+                "id": "xxx",
+                "alterId": 0,
+		            "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp"
+      }
+    }
+  ]
+}
+
 
 ```
 
-###  V2Ray 开机启动
+
+
+###  v2Ray 开机启动
 
 ```
-
 # 启动V2ray 
 sudo systemctl start v2ray 
 
